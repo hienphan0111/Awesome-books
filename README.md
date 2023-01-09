@@ -126,6 +126,7 @@ Example:
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/hien-phan-61097b256/)
 2. Nezerwa
 - GitHub: [@Nezerwa](https://github.com/Nezerwa)
+- LinkedIn: [@eligrand-nezerwa](https://www.linkedin.com/in/eligrand-nezerwa)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
