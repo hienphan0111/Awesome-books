@@ -38,7 +38,7 @@ const renderBook = (book) => {
 };
 
 let booksData = JSON.parse(localStorage.getItem('books'));
-if (booksData !== null ){
+if (booksData !== null) {
   booksData.forEach((book) => renderBook(book));
 } else {
   localStorage.setItem('books', JSON.stringify(books));
