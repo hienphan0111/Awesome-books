@@ -2,7 +2,7 @@
 
 <div align="center">
 
-  <img src="murple_logo" alt="logo" width="140"  height="auto" />
+  <img src="aw-logo.png" alt="logo" width="140"  height="auto" />
   <br/>
 
   <h3><b>Awesome books</b></h3>
@@ -63,7 +63,7 @@ To get a local copy up and running, follow these steps.
 
 1. Download the **Zip** file or clone the repo with:
 ```bash
-git clone https://github.com/tresorsawasawa/MyPortfolio.git
+git clone https://github.com/hienphan/Awesome-books.git
 ```
 3. To access cloned directory run:
 ```bash
@@ -120,11 +120,13 @@ Example:
 
 ## 👥 Authors <a name="authors"></a>
 
-
+1. Hien Phan
 - GitHub: [@hienphan0111](https://github.com/hienphan0111)
 - Twitter: [@hienphan0111](https://twitter.com/twitterhandle)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/hien-phan-61097b256/)
-
+2. Nezerwa
+- GitHub: [@Nezerwa](https://github.com/Nezerwa)
+- LinkedIn: [@eligrand-nezerwa](https://www.linkedin.com/in/eligrand-nezerwa)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -132,12 +134,9 @@ Example:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **About**
-- [ ] **Class**
-- [ ] **Join**
-- [ ] **Teacher**
-- [ ] **News**
-- [ ] **BIM event**
+- [ ] **Add book**
+- [ ] **Remove book**
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
