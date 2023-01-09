@@ -34,9 +34,9 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 Bim online training class <a name="about-project"></a>
+# 📖 Awesome books <a name="about-project"></a>
 
-This website will give students book the bim course online.
+This website will give user add or remove books from collection.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -46,7 +46,7 @@ This website will give students book the bim course online.
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🚀 Live Demo <a name="live-demo"></a>
-To see the demo version, you can <a href="https://hienphan0111.github.io/bim-online-class/"> Click here </a>
+To see the demo version, you can <a href="https://hienphan0111.github.io/awesome-books/"> Click here </a>
 
 <!-- GETTING STARTED -->
 
