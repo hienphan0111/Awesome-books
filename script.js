@@ -69,9 +69,11 @@ add.addEventListener('click', () => {
     title: '',
     author: '',
   };
-  book.id = booksBox1.getBooks.length + 1;
-  book.title = inputTitle.value;
-  book.author = inputAuthor.value;
-  booksBox1.add(book);
-  localStorage.setItem('books', JSON.stringify(booksBox1.getBooks));
+  if ((inputTitle.value !== '') && (inputAuthor.value !== '')) {
+    book.id = booksBox1.getBooks.length + 1;
+    book.title = inputTitle.value;
+    book.author = inputAuthor.value;
+    booksBox1.add(book);
+    localStorage.setItem('books', JSON.stringify(booksBox1.getBooks));
+  }
 });
