@@ -26,6 +26,9 @@ const renderBook = (book) => {
   const bookItem = document.createElement('div');
   bookItem.classList.add('book');
   const { id, title, author } = book;
+  if (id % 2 !== 0) {
+    bookItem.classList.add('gray');
+  }
   const html = `
     <div class="book-info">
       <p class="title">"${title}" </p>
