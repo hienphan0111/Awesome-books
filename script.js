@@ -1,24 +1,24 @@
 class Books {
   constructor(books) {
-    this._books = books;
+    this.books = books;
   }
 
   get getBooks() {
-    return this._books;
+    return this.books;
   }
 
   setBooks(books) {
-    return this._books = books;
+    this.books = books;
   }
 
   remove(index) {
-    this._books.splice(index, 1);
+    this.books.splice(index, 1);
   }
 
   add(book) {
-    this._books.push(book);
+    this.books.push(book);
   }
-};
+}
 
 const booksEle = document.querySelector('.books');
 
@@ -40,14 +40,14 @@ const renderBook = (book) => {
   booksEle.appendChild(bookItem);
 };
 
-let booksData = JSON.parse(localStorage.getItem('books'));
+const booksData = JSON.parse(localStorage.getItem('books'));
 
 const booksBox1 = new Books(booksData);
 
 if (booksData !== null) {
   booksBox1.getBooks.forEach((book) => renderBook(book));
 } else {
-  booksBox1.setBooks([]); 
+  booksBox1.setBooks([]);
 }
 
 const remove = document.querySelectorAll('.remove');

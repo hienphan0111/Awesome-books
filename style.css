@@ -74,7 +74,7 @@ hr {
 
 #add-book {
   box-shadow: 3px 3px;
-  translate: 2s;
+  transition: 2s;
 }
 
 #add-book:active {
