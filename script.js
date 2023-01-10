@@ -1,4 +1,24 @@
-const books = [];
+class Books {
+  constructor(books) {
+    this.books = books;
+  }
+
+  get getBooks() {
+    return this.books;
+  }
+
+  setBooks(books) {
+    this.books = books;
+  }
+
+  remove(index) {
+    this.books.splice(index, 1);
+  }
+
+  add(book) {
+    this.books.push(book);
+  }
+}
 
 const booksEle = document.querySelector('.books');
 
@@ -6,30 +26,35 @@ const renderBook = (book) => {
   const bookItem = document.createElement('div');
   bookItem.classList.add('book');
   const { id, title, author } = book;
+  if (id % 2 !== 0) {
+    bookItem.classList.add('gray');
+  }
   const html = `
-    <p class="title">${title}</p>
-    <p class="author">${author}</p>
+    <div class="book-info">
+      <p class="title">"${title}" </p>
+      <p class="author">by ${author}</p>
+    </div>
     <button class="remove" id=${id}>Remove</button>
-    <hr>
   `;
   bookItem.innerHTML = html;
   booksEle.appendChild(bookItem);
 };
 
-let booksData = JSON.parse(localStorage.getItem('books'));
+const booksData = JSON.parse(localStorage.getItem('books'));
+
+const booksBox1 = new Books(booksData);
+
 if (booksData !== null) {
-  booksData.forEach((book) => renderBook(book));
+  booksBox1.getBooks.forEach((book) => renderBook(book));
 } else {
-  localStorage.setItem('books', JSON.stringify(books));
-  books.forEach((book) => renderBook(book));
+  booksBox1.setBooks([]);
 }
 
 const remove = document.querySelectorAll('.remove');
 remove.forEach((item, index) => {
   item.addEventListener('click', () => {
-    booksData = JSON.parse(localStorage.getItem('books'));
-    booksData.splice(index, 1);
-    localStorage.setItem('books', JSON.stringify(booksData));
+    booksBox1.remove(index);
+    localStorage.setItem('books', JSON.stringify(booksBox1.getBooks));
     window.location.reload();
   });
 });
@@ -39,15 +64,16 @@ const inputAuthor = document.getElementById('book-author');
 const add = document.getElementById('add-book');
 
 add.addEventListener('click', () => {
-  booksData = JSON.parse(localStorage.getItem('books'));
   const book = {
     id: 0,
     title: '',
     author: '',
   };
-  book.id = booksData.length + 1;
-  book.title = inputTitle.value;
-  book.author = inputAuthor.value;
-  booksData.push(book);
-  localStorage.setItem('books', JSON.stringify(booksData));
+  if ((inputTitle.value !== '') && (inputAuthor.value !== '')) {
+    book.id = booksBox1.getBooks.length + 1;
+    book.title = inputTitle.value;
+    book.author = inputAuthor.value;
+    booksBox1.add(book);
+    localStorage.setItem('books', JSON.stringify(booksBox1.getBooks));
+  }
 });
