@@ -1,3 +1,11 @@
+function updateTime() {
+  const time = new Date();
+  const displayTime = document.getElementById('time');
+  displayTime.innerText = time;
+}
+
+window.setInterval(updateTime, 1000);
+
 class Books {
   constructor(books) {
     this.books = books;
