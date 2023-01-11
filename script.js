@@ -85,3 +85,30 @@ add.addEventListener('click', () => {
     localStorage.setItem('books', JSON.stringify(booksBox1.getBooks));
   }
 });
+
+// Menu interactive
+
+const listMn = document.getElementById('list');
+const addMn = document.getElementById('add-new');
+const contactMn = document.getElementById('contact');
+const allBooks = document.querySelector('.all-books');
+const addBook = document.querySelector('.add-book');
+const contact = document.querySelector('.contact');
+
+listMn.addEventListener('click', () => {
+  allBooks.classList.remove('hidden');
+  addBook.classList.add('hidden');
+  contact.classList.add('hidden');
+});
+
+addMn.addEventListener('click', () => {
+  allBooks.classList.add('hidden');
+  addBook.classList.remove('hidden');
+  contact.classList.add('hidden');
+});
+
+contactMn.addEventListener('click', () => {
+  allBooks.classList.add('hidden');
+  addBook.classList.add('hidden');
+  contact.classList.remove('hidden');
+});
