@@ -7,7 +7,7 @@
 }
 
 .hidden {
-  display: none;
+  display: none !important;
 }
 
 .main-nav {
@@ -135,7 +135,10 @@ hr {
 }
 
 footer {
+  position: absolute;
+  bottom: 10px;
   border: 1px solid #000;
   margin: 5px 10px;
   padding: 5px 10px;
+  width: 98vw;
 }
