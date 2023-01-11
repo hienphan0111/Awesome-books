@@ -1,3 +1,11 @@
+function updateTime() {
+  const time = new Date();
+  const displayTime = document.getElementById('time');
+  displayTime.innerText = time;
+}
+
+window.setInterval(updateTime, 1000);
+
 class Books {
   constructor(books) {
     this.books = books;
@@ -76,4 +84,26 @@ add.addEventListener('click', () => {
     booksBox1.add(book);
     localStorage.setItem('books', JSON.stringify(booksBox1.getBooks));
   }
+});
+// Menu interactive
+const listMn = document.getElementById('list');
+const addMn = document.getElementById('add-new');
+const contactMn = document.getElementById('contact');
+const allBooks = document.querySelector('.all-books');
+const addBook = document.querySelector('.add-book');
+const contact = document.querySelector('.contact');
+listMn.addEventListener('click', () => {
+  allBooks.classList.remove('hidden');
+  addBook.classList.add('hidden');
+  contact.classList.add('hidden');
+});
+addMn.addEventListener('click', () => {
+  allBooks.classList.add('hidden');
+  addBook.classList.remove('hidden');
+  contact.classList.add('hidden');
+});
+contactMn.addEventListener('click', () => {
+  allBooks.classList.add('hidden');
+  addBook.classList.add('hidden');
+  contact.classList.remove('hidden');
 });
